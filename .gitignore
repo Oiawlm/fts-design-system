@@ -1,0 +1,13 @@
+# 本地维护文档（对齐 fts 仓纪律：不入公开仓）
+AGENTS.md
+handoff/
+
+# 系统与临时文件
+Thumbs.db
+.DS_Store
+*.tmp
+~$*
+
+# 工具产物
+.zcode/
+node_modules/
