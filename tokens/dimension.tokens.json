@@ -1,7 +1,7 @@
 {
   "dimension": {
     "$type": "dimension",
-    "$description": "尺寸 token：圆角、间距、位移、组件尺寸与瓦片几何（值带 px 单位，负值合法；列数类为 number 无单位）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.2；提取日期 2026-11-11。",
+    "$description": "尺寸 token：圆角、间距、位移、组件尺寸与瓦片几何（值带 px 单位，负值合法；列数类为 number 无单位）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）只读取证；映射权威 TOKEN-MAP-V1（对账 reference/extractions/2026-11-fts-v1.72.0.md） §3.2；提取日期 2026-11-11。",
     "radius": {
       "$description": "圆角阶梯（控件级 4/表面级 8 两档＋阶梯外登记值）；shell=窗壳圆角（DWM 裁剪与内容层同值）。",
       "control": { "$value": "4px", "$description": "控件级（输入框/按钮/下拉/行内编辑器）。WPF: ControlCornerRadius。fts: DT:190｜M:50" },

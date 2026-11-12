@@ -1,6 +1,6 @@
 {
   "motion": {
-    "$description": "动效 token：时长三档＋场景别名、通用缓动、二维码容器变换独立组、缩放与交错封顶、禁用不透明度。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.3；提取日期 2026-11-11。",
+    "$description": "动效 token：时长三档＋场景别名、通用缓动、二维码容器变换独立组、缩放与交错封顶、禁用不透明度。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）只读取证；映射权威 TOKEN-MAP-V1（对账 reference/extractions/2026-11-fts-v1.72.0.md） §3.3；提取日期 2026-11-11。",
     "duration": {
       "$type": "duration",
       "$description": "时长（ms）：三档为 primitive（83/167/250，官方 Fluent 值）；场景时长＝档位别名（锚定不加档）或场景原始值。",

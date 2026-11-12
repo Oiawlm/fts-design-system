@@ -1,6 +1,6 @@
 {
   "color": {
-    "$description": "色彩 token：双主题原始色（color.light/color.dark 两组持原始值）＋卡片阴影＋语义色别名（$value 指向 light 分支；深色解析规则＝将别名路径中 `.light.` 替换为 `.dark.`）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/DesignTheme.Light|Dark.xaml（缩写 LT/DK）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.1；提取日期 2026-11-11。",
+    "$description": "色彩 token：双主题原始色（color.light/color.dark 两组持原始值）＋卡片阴影＋语义色别名（$value 指向 light 分支；深色解析规则＝将别名路径中 `.light.` 替换为 `.dark.`）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/DesignTheme.Light|Dark.xaml（缩写 LT/DK）只读取证；映射权威 TOKEN-MAP-V1（对账 reference/extractions/2026-11-fts-v1.72.0.md） §3.1；提取日期 2026-11-11。",
     "light": {
       "$type": "color",
       "$description": "浅色主题原始色。锚点缩写见本文件顶层 $description。",

@@ -277,6 +277,6 @@ reduced.addEventListener('change', (e) => (e.matches ? settleImmediately() : pla
 | §3.3 意图事务 | fts 悬停意图事务（60ms 意图窗，`DesignTokens.cs:86` 登记为豁免行、design.md §六）；本文为计时器模式通用化 |
 | §3.4 交错 | `DesignTokens.cs:70`（步长 40ms）、:129（封顶 8；TOKEN-MAP 注②：封顶为文档性 token） |
 | §3.5 退化口径 | `DesignTokens.cs:63`（快档别名 reduced-fade）；skill motion 规则「快档纯淡入或立即定格、时序性延迟保留」 |
-| §4.1 状态类型学 | `DesignTokens.cs:133`（按压缩放 0.96）、:209-210（禁用两档）；类型学叙述＝`docs/interaction-states.md`（并行窗口产物，集成后互链） |
+| §4.1 状态类型学 | `DesignTokens.cs:133`（按压缩放 0.96）、:209-210（禁用两档）；类型学叙述＝[docs/interaction-states.md](../interaction-states.md) |
 | §4.2 三层卡片 | fts 卡片三层结构（`Resources/MainWindowStyles.xaml:1241-1274`）；操作列预留＝同文件 :17（30px） |
 | CSS 变量命名与 shadow 折叠 | TOKEN-MAP-V1 §一（`.`→`-`＋`--` 前缀；缓动值为 cubic-bezier() 函数）、§二.4（shadow 折叠为 box-shadow 值，另存 `--color-shadow-card-opacity`） |

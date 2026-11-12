@@ -104,14 +104,14 @@
 
 ## 七、六原则↔反例组互链
 
-| 原则 | 对应反例组（[anti-patterns.md](anti-patterns.md)） | 相关文档（并行窗口产物） |
+| 原则 | 对应反例组（[anti-patterns.md](anti-patterns.md)） | 相关文档 |
 |---|---|---|
-| §一 单一数值源＋单源镜像锁定 | 一、数值与来源治理（全部） | 基础篇 color「动态引用纪律」 |
-| §二 恒定几何 | 二、布局与几何稳定性（全部） | 范式篇 grid/scrollbar/card/dialog |
-| §三 档位制 | 一、数值与来源治理（A16/A23 档位子面） | 基础篇 shape/typography |
-| §四 缓动按语义＋减动效 | 四、交互与动效语义（A22 曲线子面） | 动效篇「三档与场景锚定」 |
-| §五 分层叠加＋悬停双轨 | 三、渲染与视觉保真＋四（A14 状态子面） | 状态篇「类型学与双轨」 |
-| §六 克制与真实可达＋意图事务 | 四、交互与动效语义（A17–A20） | 动效篇「意图事务」 |
+| §一 单一数值源＋单源镜像锁定 | 一、数值与来源治理（全部） | 基础篇 [color](foundations/color.md)「动态引用纪律」 |
+| §二 恒定几何 | 二、布局与几何稳定性（全部） | 范式篇 [grid](patterns/grid.md)/[scrollbar](patterns/scrollbar.md)/[card](patterns/card.md)/[dialog](patterns/dialog.md) |
+| §三 档位制 | 一、数值与来源治理（A16/A23 档位子面） | 基础篇 [shape-and-spacing](foundations/shape-and-spacing.md)/[typography](foundations/typography.md) |
+| §四 缓动按语义＋减动效 | 四、交互与动效语义（A22 曲线子面） | [motion](motion.md)「三档与场景锚定」 |
+| §五 分层叠加＋悬停双轨 | 三、渲染与视觉保真＋四（A14 状态子面） | [interaction-states](interaction-states.md)「类型学与双轨」 |
+| §六 克制与真实可达＋意图事务 | 四、交互与动效语义（A17–A20） | [motion](motion.md)「意图事务」 |
 
 ## 八、fts 溯源
 

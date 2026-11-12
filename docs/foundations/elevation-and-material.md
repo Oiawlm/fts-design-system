@@ -1,6 +1,6 @@
 # 基础·海拔与材质（Elevation & Material）
 
-> **一句话定位**：海拔与材质的原子规则——阴影隔离原则与三层结构、共享冻结实例、深浅主题阴影参数差异化、系统材质壳与不透明回退、对话框单壳；数值只是示例，权威快照在 `tokens/color.tokens.json` 的 shadow 组与 `tokens/dimension.tokens.json`。**来源**：源项目 1.72.0 基线（commit `bba9b4e`）设计规范层级章与窗口材质章＋两本主题字典阴影资源，经 `handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md` §3.1 映射。**日期**：2026-11-11。**行数预算**：≤300 行（现 76 行）。交叉引用：[color.md](color.md)（阴影色键与表面键）、[shape-and-spacing.md](shape-and-spacing.md)（壳圆角键）。
+> **一句话定位**：海拔与材质的原子规则——阴影隔离原则与三层结构、共享冻结实例、深浅主题阴影参数差异化、系统材质壳与不透明回退、对话框单壳；数值只是示例，权威快照在 `tokens/color.tokens.json` 的 shadow 组与 `tokens/dimension.tokens.json`。**来源**：源项目 1.72.0 基线（commit `bba9b4e`）设计规范层级章与窗口材质章＋两本主题字典阴影资源，经 TOKEN-MAP-V1（对账 [2026-11-fts-v1.72.0.md](../../reference/extractions/2026-11-fts-v1.72.0.md)） §3.1 映射。**日期**：2026-11-11。**行数预算**：≤300 行（现 76 行）。交叉引用：[color.md](color.md)（阴影色键与表面键）、[shape-and-spacing.md](shape-and-spacing.md)（壳圆角键）。
 
 ## 一、普适规则
 

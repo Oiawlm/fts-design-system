@@ -1,6 +1,6 @@
 {
   "typography": {
-    "$description": "排版 token：字体族、字号档（9–20px 九档）、行高与额外行距、可见行数与预览高、字重单档。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）、src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）与 docs/design.md（缩写 design）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.4；提取日期 2026-11-11。",
+    "$description": "排版 token：字体族、字号档（9–20px 九档）、行高与额外行距、可见行数与预览高、字重单档。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）、src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）与 docs/design.md（缩写 design）只读取证；映射权威 TOKEN-MAP-V1（对账 reference/extractions/2026-11-fts-v1.72.0.md） §3.4；提取日期 2026-11-11。",
     "family": {
       "$type": "fontFamily",
       "$description": "字体族（链式回退；code 为独立功能来源，不随用户界面字体变化）。",

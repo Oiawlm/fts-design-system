@@ -1,7 +1,7 @@
 # 资产台账（assets/）
 
 > **一句话定位**：本目录 18 项视觉资产的唯一台账——来源、编码与分辨率、内容一句话、关联文档与再生指针；只管资产事实，一切数值权威在 `tokens/`（此处零数值复制）。
-> **来源**：PLAN-V1 §2.4 资产清单（`handoff/2026-11-11-bootstrap/PLAN-V1.md`）；两组源＝fts 仓 `docs/images/`（基线 `bba9b4e`，2026-11-04 批次录制）与用户级 skill `fts-style-system/assets/`（仅 `settings-window.png`，2026-11-10 新录）。
+> **来源**：PLAN-V1 §2.4 资产清单（对账 [2026-11-fts-v1.72.0.md](../reference/extractions/2026-11-fts-v1.72.0.md)）；两组源＝fts 仓 `docs/images/`（基线 `bba9b4e`，2026-11-04 批次录制）与用户级 skill `fts-style-system/assets/`（仅 `settings-window.png`，2026-11-10 新录）。
 > **日期**：2026-11-12
 
 ## 事实约定

@@ -1,6 +1,6 @@
 # 基础·配色（Color）
 
-> **一句话定位**：配色的原子规则——语义分工、双层结构（原始值↔语义角色）、双主题同键位整本替换与豁免登记机制；数值只是示例，权威快照在 `tokens/color.tokens.json`。**来源**：源项目 1.72.0 基线（commit `bba9b4e`）设计规范配色章＋设计常量与两本主题字典，经 `handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md` §3.1 映射。**日期**：2026-11-11。**行数预算**：≤300 行（现 85 行）。
+> **一句话定位**：配色的原子规则——语义分工、双层结构（原始值↔语义角色）、双主题同键位整本替换与豁免登记机制；数值只是示例，权威快照在 `tokens/color.tokens.json`。**来源**：源项目 1.72.0 基线（commit `bba9b4e`）设计规范配色章＋设计常量与两本主题字典，经 TOKEN-MAP-V1（对账 [2026-11-fts-v1.72.0.md](../../reference/extractions/2026-11-fts-v1.72.0.md)） §3.1 映射。**日期**：2026-11-11。**行数预算**：≤300 行（现 85 行）。
 
 ## 一、普适规则
 
@@ -81,5 +81,5 @@
 | 对话框表面＝字典侧值、无常量对应物（两本成对持值） | `DesignTheme.Light.xaml:8` / `DesignTheme.Dark.xaml:7`（DialogSurfaceBrush 注释） |
 | 配色豁免清单（扫码面恒白岛式/材质色调/独立工具底/结构性透明）与动态引用纪律（契约 #28） | `docs/design.md` §一末（61 行）＋ §六豁免表（226 行） |
 | 灰态环复用 SecondaryTextBrush（非新 token，契约 #56） | `docs/design.md` §五·D（180 行，双态环语法） |
-| OnAccent 与 Card 浅色同白属巧合、不设别名 | `handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md` §四.1 |
+| OnAccent 与 Card 浅色同白属巧合、不设别名 | TOKEN-MAP-V1（对账 [2026-11-fts-v1.72.0.md](../../reference/extractions/2026-11-fts-v1.72.0.md)） §四.1 |
 | 阴影深浅参数差异化（浅 0.12/深 0.35） | `DesignTheme.Light.xaml:27-33` / `DesignTheme.Dark.xaml:26-32`（CardShadowEffect） |
