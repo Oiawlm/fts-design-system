@@ -29,7 +29,7 @@
 | docs/patterns/（范式·动态六篇） | [chip-rail.md](patterns/chip-rail.md)、[peek-dock.md](patterns/peek-dock.md)、[container-transform.md](patterns/container-transform.md)、[experiment-toggle.md](patterns/experiment-toggle.md)、[reading-view.md](patterns/reading-view.md)、[settings-ia.md](patterns/settings-ia.md) |
 | docs/adaptation/（适配三篇） | [adoption-workflow.md](adaptation/adoption-workflow.md)、[wpf.md](adaptation/wpf.md)、[web.md](adaptation/web.md) |
 
-其他层：`tokens/`（DTCG 四件，数值权威）、`platforms/wpf|web/`（平台镜像）、`assets/`（资产 18 项＋台账）、`reference/extractions/`（提取对账）、`scripts/`（对账校验）；`skill/` 由后续窗口产出。
+其他层：`tokens/`（DTCG 四件，数值权威）、`platforms/wpf|web/`（平台镜像）、`assets/`（资产 18 项＋台账）、`reference/extractions/`（提取对账）、`scripts/`（对账校验）；`skill/`（Agent Skill 源，`skill/fts-style-system/`；部署脚本 `scripts/sync-skill.ps1`）。
 
 ## 三、读法约定
 

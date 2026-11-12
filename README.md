@@ -40,7 +40,7 @@
 - **双平台即取镜像**：Web 侧 `tokens.css`（106 个 CSS 变量，内置深色与 `prefers-color-scheme` 跟随）；WPF 侧浅/深两本 `ResourceDictionary`（各 39 键）。
 - **三方对账互锁**：`scripts/validate-tokens.ps1` 对 DTCG、CSS、XAML 三方校验，改源不重新投影即转红。
 - **原则可自查**：六条设计原则各带落地判据与反例信号，全部不绑定任何框架。
-- **AI Skill 投影**：同一体系封装为 ZCode skill（`skill/fts-style-system/`），AI 辅助开发时直接调用。
+- **AI Agent Skill**：同一体系封装为开放标准 [SKILL.md](skill/fts-style-system/SKILL.md)，ZCode / Claude Code / Codex / Cursor 等任意 AI 编码代理一键安装。
 
 ## 🧭 核心概念速览
 
@@ -51,7 +51,7 @@
 | 数值 | [`tokens/`](tokens/) | W3C DTCG 四件快照，全系统唯一数值权威 |
 | 平台 | [`platforms/`](platforms/) | Web CSS 变量＋WPF 双主题字典，即取即用的镜像出口 |
 | 叙述 | [`docs/`](docs/) | 25 篇正文：哲学/基础/范式/适配，人类可读的规则与判据 |
-| 投影 | [`skill/`](skill/) | ZCode Skill，把体系带进 AI 辅助开发 |
+| 投影 | [`skill/`](skill/) | Agent Skill（开放标准），把体系带进任何 AI 编码代理 |
 
 **哲学六条**（一行版，展开见 [docs/philosophy.md](docs/philosophy.md)）：
 
@@ -66,7 +66,7 @@
 
 ## 🚀 30 秒快速开始
 
-两条最短路径：拿一份平台镜像，按语义名消费。
+三条最短路径：Web 侧拿 CSS 变量、WPF 侧拿主题字典，或把整套体系装进 AI 编码代理。
 
 ### Web（CSS 变量）
 
@@ -109,6 +109,29 @@
 
 运行时整本替换字典（同键位两套值）即全窗换肤，全部 `DynamicResource` 消费者即时生效。
 
+### AI Agent（Skill）
+
+skill 为开放标准 [SKILL.md](skill/fts-style-system/SKILL.md) 格式，ZCode / Claude Code / Codex / Cursor 等任意 AI 编码代理原生识别。一键部署：
+
+```powershell
+git clone https://github.com/Oiawlm/fts-design-system.git
+cd fts-design-system
+powershell -ExecutionPolicy Bypass -File scripts/sync-skill.ps1     # Windows PowerShell 5.1
+# 非 Windows / PowerShell Core：pwsh scripts/sync-skill.ps1
+```
+
+脚本自动探测本机全部 AI 代理的 skills 目录并部署到每一处（`-DryRun` 预演、`-Targets "路径;路径"` 显式指定；幂等可重入），运行时报告探测到几个代理、部署到哪几处。
+
+| 代理 | 用户级目录 | 项目级目录 |
+|---|---|---|
+| ZCode | `~/.zcode/skills/` | `.zcode/skills/` |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+| Codex | `~/.agents/skills/`（或 `~/.codex/skills/`） | `.agents/skills/` |
+| Cursor | `~/.agents/skills/`（或 `~/.cursor/skills/`） | `.cursor/skills/` |
+| Gemini CLI | `~/.agents/skills/`（或 `~/.gemini/skills/`） | `.gemini/skills/` |
+
+手动安装：把 [`skill/fts-style-system/`](skill/fts-style-system/) 整个目录复制到上表任一路径即可，无脚本依赖。另一台电脑：clone 本仓后重跑同一命令。
+
 ## 📖 目录导览
 
 完整路由（12 条「我想做 X → 读哪篇」）见 [docs/README.md](docs/README.md)，摘要如下：
@@ -121,6 +144,7 @@
 | 选组件范式 | [docs/patterns/](docs/patterns/)：卡片、瓦片、网格、滚动条、对话框、空状态、chip 轨、贴边停靠、容器变换等 12 篇 |
 | 新项目整体套用 | [docs/adaptation/adoption-workflow.md](docs/adaptation/adoption-workflow.md)（八步工作流＋最小采用集） |
 | WPF / Web 落地细节 | [docs/adaptation/wpf.md](docs/adaptation/wpf.md)、[docs/adaptation/web.md](docs/adaptation/web.md) |
+| 把体系装进 AI 编码代理 | 本页「[30 秒快速开始 → AI Agent](#ai-agent-skill)」小节；skill 源见 [`skill/fts-style-system/`](skill/fts-style-system/) |
 
 ## 🖼️ 界面一览
 
