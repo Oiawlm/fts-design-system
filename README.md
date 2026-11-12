@@ -68,7 +68,7 @@
 
 两条最短路径：拿一份平台镜像，按语义名消费。
 
-**Web（CSS 变量）**
+### Web（CSS 变量）
 
 1. 把 [`platforms/web/tokens.css`](platforms/web/tokens.css) 复制进项目并引入：
 
@@ -88,7 +88,7 @@
 
 深色主题：在 `<html>` 上设置 `data-theme="dark"` 手动切换，或依赖文件内置的 `prefers-color-scheme` 自动跟随系统。
 
-**WPF（主题字典）**
+### WPF（主题字典）
 
 1. 把 [`platforms/wpf/`](platforms/wpf/) 的两本字典复制进项目（如 `Themes/` 目录）。
 2. 按当前主题合并其中一本到窗口（或 App）资源：
@@ -141,7 +141,7 @@
 <details>
 <summary>完整图集（11 项：图解、静帧与动图；深色变体经正文图注链接可达）</summary>
 
-**结构图解**
+### 结构图解
 
 <img src="assets/panel-anatomy.png" alt="面板展开态结构标注图" width="560">
 
@@ -159,7 +159,7 @@
 
 *删除钮双语义放大：左键可撤销、右键永久删除*
 
-**静帧**
+### 静帧
 
 <img src="assets/pinned-divider-accent-bar.png" alt="置顶区与普通区之间的强调色分隔线" width="400">
 
@@ -173,7 +173,7 @@
 
 *添加网页地址对话框（浅色）：聚焦紫描边输入框＋双中性钮，深色见 [quicklaunch-url-dialog-dark.png](assets/quicklaunch-url-dialog-dark.png)*
 
-**动图**
+### 动图
 
 <img src="assets/drag-reorder.gif" alt="分类内拖动卡片重排" width="400">
 
