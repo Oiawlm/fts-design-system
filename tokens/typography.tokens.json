@@ -1,0 +1,46 @@
+{
+  "typography": {
+    "$description": "排版 token：字体族、字号档（9–20px 九档）、行高与额外行距、可见行数与预览高、字重单档。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）、src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）与 docs/design.md（缩写 design）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.4；提取日期 2026-11-11。",
+    "family": {
+      "$type": "fontFamily",
+      "$description": "字体族（链式回退；code 为独立功能来源，不随用户界面字体变化）。",
+      "ui": { "$value": "Microsoft YaHei UI, Microsoft YaHei", "$description": "界面字体链（链首 Win11 必装，回退保证缺失时不断字；图标字体独立不随动）。WPF: InterfaceFontFamily。fts: DT:149｜M:16" },
+      "code": { "$value": "Cascadia Mono, Consolas", "$description": "代码字体链（阅读视图代码块）。fts: DT:173" }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "字号档（px）：badge/caption/secondary/ui/title 五档为源项目 XAML 字面量成文档位（锚点指叙述权威 design:141），body 为常量，reading-h1~h3 为阅读标题阶梯。",
+      "badge": { "$value": "9px", "$description": "徽章（示例值档）。fts: design:141" },
+      "caption": { "$value": "11px", "$description": "说明文字（示例值档）。fts: design:141" },
+      "secondary": { "$value": "12px", "$description": "次级文本（示例值档）。fts: design:141" },
+      "ui": { "$value": "13px", "$description": "界面常规（示例值档）。fts: design:141" },
+      "body": { "$value": "14px", "$description": "卡片正文标称字号（行高推导的字号输入）。fts: DT:151" },
+      "title": { "$value": "16px", "$description": "标题（示例值档）。fts: design:141" },
+      "reading-h1": { "$value": "20px", "$description": "阅读视图一级标题。fts: DT:170" },
+      "reading-h2": { "$value": "17px", "$description": "阅读视图二级标题。fts: DT:171" },
+      "reading-h3": { "$value": "15px", "$description": "阅读视图三级标题（H4–H6＝正文字号加 SemiBold 权重）。fts: DT:172" }
+    },
+    "line-height": {
+      "$type": "dimension",
+      "$description": "行高。",
+      "body": { "$value": "19px", "$description": "卡片正文行高（派生公式＝ceil(size.body×字体 LineSpacing 1.27001953125＋leading.extra)，默认字体推导值；用户自定义字体时按该字体度量另行推导）。WPF: CardTextLineHeight。fts: M:36" }
+    },
+    "leading": {
+      "$type": "dimension",
+      "$description": "行距。",
+      "extra": { "$value": "1px", "$description": "行高推导公式的额外行距常数。fts: DT:157" }
+    },
+    "clamp": {
+      "$description": "文本截断（行数为 number；预览高为行高倍率，dimension）。",
+      "body-max-lines": { "$type": "number", "$value": 5, "$description": "正文可见行数上限。fts: DT:159" },
+      "note-max-lines": { "$type": "number", "$value": 2, "$description": "备注可见行数上限。fts: DT:161" },
+      "body-preview-height": { "$type": "dimension", "$value": "95px", "$description": "正文预览高（派生＝line-height.body×body-max-lines）。WPF: CardTextPreviewMaxHeight。fts: M:40" },
+      "note-preview-height": { "$type": "dimension", "$value": "38px", "$description": "备注预览高（派生＝line-height.body×note-max-lines）。WPF: CardNoteMaxHeight。fts: M:41" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "$description": "字重（单档 SemiBold，无阶梯）。",
+      "emphasis": { "$value": 600, "$description": "强调字重。fts: design:143" }
+    }
+  }
+}

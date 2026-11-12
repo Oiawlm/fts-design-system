@@ -1,0 +1,185 @@
+/*
+ * fts-design-system Web token 镜像（tokens.css）
+ * 来源：tokens/ 四个 DTCG 文件投影（源项目 fts 基线 bba9b4e，v1.72.0；提取日期 2026-11-11）。
+ * 规则：变量名＝DTCG 路径 `.` → `-` 加 `--` 前缀；色 primitive（color.light.* 与 color.dark.*）不出变量，
+ * 变量只在语义层出口（共 106 个）。`:root`＝语义层浅色解析值；深色＝下方 dark 块（23 个颜色变量）。
+ * 卡片阴影按 box-shadow 折叠：x y blur spread rgba(r,g,b,opacity)；另保留 --color-shadow-card-opacity 供程序消费。
+ * 对账：scripts/validate-tokens.ps1（DTCG ↔ 本文件 ↔ WPF 字典三方互锁）。
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ===== color（23）：浅色解析值 ===== */
+  --color-surface-window-shell: #F7F8FA;
+  --color-surface-tab-rail: #EFF1F4;
+  --color-surface-card: #FFFFFF;
+  --color-surface-header: #FBFBFC;
+  --color-surface-status: #FCFCFD;
+  --color-surface-dialog: #F9F9F9;
+  --color-material-window-shell-tint: #CCF7F8FA;
+  --color-border-default: #E2E5EA;
+  --color-border-hover: #C9CDD5;
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #5F6368;
+  --color-text-on-accent: #FFFFFF;
+  --color-accent-default: #6D5DFB;
+  --color-danger-default: #D92D20;
+  --color-interaction-hover-surface: #F4F5F7;
+  --color-interaction-selected-card-surface: #F3F1FF;
+  --color-interaction-selected-card-border: #8B7CF6;
+  --color-interaction-active-category: #E7E4FF;
+  --color-interaction-drop-target: #EAE7FF;
+  --color-scrollbar-thumb: #B8BDC7;
+  --color-scrollbar-thumb-hover: #969CA7;
+  --color-shadow-card: 0 2px 8px 0 rgba(29, 29, 31, 0.12);
+  --color-shadow-card-opacity: 0.12;
+
+  /* ===== dimension（29）===== */
+  --dimension-radius-control: 4px;
+  --dimension-radius-surface: 8px;
+  --dimension-radius-card: 8px;
+  --dimension-radius-shell: 8px;
+  --dimension-radius-header-action: 7px;
+  --dimension-radius-pin-button: 6px;
+  --dimension-radius-selection-ring: 5px;
+  --dimension-radius-selected-count-badge: 7px;
+  --dimension-spacing-card-inset: 12px;
+  --dimension-spacing-card-gutter: 4px;
+  --dimension-spacing-card-padding: 12px;
+  --dimension-spacing-launcher-viewport-inset: 8px;
+  --dimension-spacing-reading-block-gap: 6px;
+  --dimension-spacing-reading-code-padding: 8px;
+  --dimension-spacing-card-text-reserved-right: 64px;
+  --dimension-offset-content-entrance: 6px;
+  --dimension-offset-collapse-exit: 24px;
+  --dimension-offset-card-hover-lift: -1px;
+  --dimension-offset-tile-hover-lift: -2px;
+  --dimension-offset-tile-entrance: 8px;
+  --dimension-size-peek-handle-width: 16px;
+  --dimension-size-reading-quote-bar: 3px;
+  --dimension-size-card-operation-column: 30px;
+  --dimension-tile-width: 84px;
+  --dimension-tile-height: 100px;
+  --dimension-tile-gutter: 8px;
+  --dimension-tile-pitch: 92px;
+  --dimension-tile-min-columns: 3;
+  --dimension-tile-max-columns: 6;
+
+  /* ===== motion（36）：时长/缓动/缩放/交错/禁用不透明度 ===== */
+  --motion-duration-fast: 83ms;
+  --motion-duration-normal: 167ms;
+  --motion-duration-slow: 250ms;
+  --motion-duration-panel-expand: 167ms;
+  --motion-duration-reduced-fade: 83ms;
+  --motion-duration-hover-feedback: 167ms;
+  --motion-duration-press-feedback: 83ms;
+  --motion-duration-launch-confirm: 250ms;
+  --motion-duration-item-landing: 250ms;
+  --motion-duration-launch-collapse-delay: 250ms;
+  --motion-duration-tile-stagger-step: 40ms;
+  --motion-duration-panel-switch: 140ms;
+  --motion-duration-category-reveal: 120ms;
+  --motion-duration-panel-collapse-exit: 200ms;
+  --motion-duration-fade-visibility: 120ms;
+  --motion-duration-delete-feedback: 120ms;
+  --motion-duration-stagger-step: 40ms;
+  --motion-duration-drop-target-hold: 120ms;
+  --motion-duration-launch-reentry-latch: 500ms;
+  --motion-easing-enter: cubic-bezier(0, 0, 0, 1);
+  --motion-easing-exit: cubic-bezier(1, 0, 1, 1);
+  --motion-easing-qr-zoom-in: cubic-bezier(0.32, 0.72, 0, 1);
+  --motion-easing-qr-zoom-out: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --motion-qr-zoom-in: 450ms;
+  --motion-qr-zoom-out: 250ms;
+  --motion-qr-text-fade-in-begin: 270ms;
+  --motion-qr-text-fade-in: 180ms;
+  --motion-qr-text-fade-out: 90ms;
+  --motion-qr-thumb-fade: 150ms;
+  --motion-qr-thumb-reveal-begin: 180ms;
+  --motion-qr-handover-fade: 70ms;
+  --motion-scale-tile-press: 0.96;
+  --motion-scale-launch-confirm-pulse: 1.06;
+  --motion-stagger-tile-cap: 8;
+  --motion-opacity-control-disabled: 0.4;
+  --motion-opacity-card-disabled: 0.6;
+
+  /* ===== typography（18）===== */
+  --typography-family-ui: Microsoft YaHei UI, Microsoft YaHei;
+  --typography-family-code: Cascadia Mono, Consolas;
+  --typography-size-badge: 9px;
+  --typography-size-caption: 11px;
+  --typography-size-secondary: 12px;
+  --typography-size-ui: 13px;
+  --typography-size-body: 14px;
+  --typography-size-title: 16px;
+  --typography-size-reading-h1: 20px;
+  --typography-size-reading-h2: 17px;
+  --typography-size-reading-h3: 15px;
+  --typography-line-height-body: 19px;
+  --typography-leading-extra: 1px;
+  --typography-clamp-body-max-lines: 5;
+  --typography-clamp-note-max-lines: 2;
+  --typography-clamp-body-preview-height: 95px;
+  --typography-clamp-note-preview-height: 38px;
+  --typography-weight-emphasis: 600;
+}
+
+/* 自动跟随系统深色（示例）：未显式设置 data-theme 时按 prefers-color-scheme 切换；
+   仅语义色随主题（23 个），尺寸/动效/排版主题不变。 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-surface-window-shell: #202021;
+    --color-surface-tab-rail: #2B2B2C;
+    --color-surface-card: #2D2D2E;
+    --color-surface-header: #272728;
+    --color-surface-status: #282829;
+    --color-surface-dialog: #2B2B2B;
+    --color-material-window-shell-tint: #CC202021;
+    --color-border-default: #414143;
+    --color-border-hover: #505053;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #C8C8CA;
+    --color-text-on-accent: #FFFFFF;
+    --color-accent-default: #9C8CFF;
+    --color-danger-default: #FF8A7A;
+    --color-interaction-hover-surface: #343436;
+    --color-interaction-selected-card-surface: #343054;
+    --color-interaction-selected-card-border: #7A6DF2;
+    --color-interaction-active-category: #3A3560;
+    --color-interaction-drop-target: #322E52;
+    --color-scrollbar-thumb: #505054;
+    --color-scrollbar-thumb-hover: #6E6E74;
+    --color-shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
+    --color-shadow-card-opacity: 0.35;
+  }
+}
+
+/* 手动指定深色：在根元素设置 data-theme="dark"（置于媒体查询之后，显式指定优先于系统跟随） */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-surface-window-shell: #202021;
+  --color-surface-tab-rail: #2B2B2C;
+  --color-surface-card: #2D2D2E;
+  --color-surface-header: #272728;
+  --color-surface-status: #282829;
+  --color-surface-dialog: #2B2B2B;
+  --color-material-window-shell-tint: #CC202021;
+  --color-border-default: #414143;
+  --color-border-hover: #505053;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C8C8CA;
+  --color-text-on-accent: #FFFFFF;
+  --color-accent-default: #9C8CFF;
+  --color-danger-default: #FF8A7A;
+  --color-interaction-hover-surface: #343436;
+  --color-interaction-selected-card-surface: #343054;
+  --color-interaction-selected-card-border: #7A6DF2;
+  --color-interaction-active-category: #3A3560;
+  --color-interaction-drop-target: #322E52;
+  --color-scrollbar-thumb: #505054;
+  --color-scrollbar-thumb-hover: #6E6E74;
+  --color-shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
+  --color-shadow-card-opacity: 0.35;
+}

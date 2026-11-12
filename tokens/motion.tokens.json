@@ -1,0 +1,65 @@
+{
+  "motion": {
+    "$description": "动效 token：时长三档＋场景别名、通用缓动、二维码容器变换独立组、缩放与交错封顶、禁用不透明度。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.3；提取日期 2026-11-11。",
+    "duration": {
+      "$type": "duration",
+      "$description": "时长（ms）：三档为 primitive（83/167/250，官方 Fluent 值）；场景时长＝档位别名（锚定不加档）或场景原始值。",
+      "fast": { "$value": "83ms", "$description": "快档。fts: DT:56" },
+      "normal": { "$value": "167ms", "$description": "中档。fts: DT:57" },
+      "slow": { "$value": "250ms", "$description": "慢档。fts: DT:58" },
+      "panel-expand": { "$value": "{motion.duration.normal}", "$description": "面板展开内容。fts: DT:61" },
+      "reduced-fade": { "$value": "{motion.duration.fast}", "$description": "减弱动效淡出。fts: DT:63" },
+      "hover-feedback": { "$value": "{motion.duration.normal}", "$description": "悬停反馈。fts: DT:66" },
+      "press-feedback": { "$value": "{motion.duration.fast}", "$description": "按压反馈。fts: DT:67" },
+      "launch-confirm": { "$value": "{motion.duration.slow}", "$description": "启动确认（场景不加档，直接锚慢档）。fts: DT:121" },
+      "item-landing": { "$value": "{motion.duration.slow}", "$description": "条目落位。fts: DT:122" },
+      "launch-collapse-delay": { "$value": "{motion.duration.slow}", "$description": "启动后排队收起延迟。fts: DT:124" },
+      "tile-stagger-step": { "$value": "{motion.duration.stagger-step}", "$description": "瓦片入场交错步进。fts: DT:128" },
+      "panel-switch": { "$value": "140ms", "$description": "面板切换。fts: DT:62" },
+      "category-reveal": { "$value": "120ms", "$description": "分类揭示。fts: DT:64" },
+      "panel-collapse-exit": { "$value": "200ms", "$description": "面板收起退出。fts: DT:65" },
+      "fade-visibility": { "$value": "120ms", "$description": "可见性淡入淡出。fts: DT:68" },
+      "delete-feedback": { "$value": "120ms", "$description": "删除反馈。fts: DT:69" },
+      "stagger-step": { "$value": "40ms", "$description": "条目入场交错步进。fts: DT:70" },
+      "drop-target-hold": { "$value": "120ms", "$description": "拖放目标撤离保持窗。fts: DT:75" },
+      "launch-reentry-latch": { "$value": "500ms", "$description": "单击启动重入门闩。fts: DT:126" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "$description": "通用缓动曲线（入场减速曲线/出场加速曲线）；qr 场景曲线见 motion.easing.qr-*。",
+      "enter": { "$value": [0, 0, 0, 1], "$description": "入场（减速曲线）。fts: DT:140" },
+      "exit": { "$value": [1, 0, 1, 1], "$description": "出场（加速曲线）。fts: DT:141" },
+      "qr-zoom-in": { "$value": [0.32, 0.72, 0, 1], "$description": "容器变换入场（iOS 导航/照片缩放转场非官方测量近似）。fts: DT:104" },
+      "qr-zoom-out": { "$value": [0.25, 0.1, 0.25, 1], "$description": "容器变换收回（kCAMediaTimingFunctionDefault）。fts: DT:105" }
+    },
+    "qr": {
+      "$type": "duration",
+      "$description": "二维码容器变换独立组：时长与缓动不并入三档体系、不加第四档（档位制红线），仅本场景专用。",
+      "zoom-in": { "$value": "450ms", "$description": "入场（长档下限）。fts: DT:102" },
+      "zoom-out": { "$value": "250ms", "$description": "收回。fts: DT:103" },
+      "text-fade-in-begin": { "$value": "270ms", "$description": "文字淡入起点（≈60% 入场进度、落位时可读）。fts: DT:106" },
+      "text-fade-in": { "$value": "180ms", "$description": "文字淡入时长。fts: DT:107" },
+      "text-fade-out": { "$value": "90ms", "$description": "收回文字先隐时长。fts: DT:108" },
+      "thumb-fade": { "$value": "150ms", "$description": "缩略图入场防双影淡出。fts: DT:111" },
+      "thumb-reveal-begin": { "$value": "180ms", "$description": "缩略图收回回显起点（收回曲线反解 95% 回程取整）。fts: DT:115" },
+      "handover-fade": { "$value": "70ms", "$description": "收回交接段（派生公式＝zoom-out−thumb-reveal-begin；源项目生产代码零消费的文档性常量，引用时标注此性质）。fts: DT:118" }
+    },
+    "scale": {
+      "$type": "number",
+      "$description": "缩放幅值（无单位）。",
+      "tile-press": { "$value": 0.96, "$description": "瓦片按压缩放。fts: DT:133" },
+      "launch-confirm-pulse": { "$value": 1.06, "$description": "启动确认脉冲峰值（1→1.06→1）。fts: DT:135" }
+    },
+    "stagger": {
+      "$type": "number",
+      "$description": "交错编排参数。",
+      "tile-cap": { "$value": 8, "$description": "瓦片入场交错封顶（min(i,8) 的 8；源项目封顶逻辑为字面量实现，本 token 为文档性收录，引用时标注）。fts: DT:129" }
+    },
+    "opacity": {
+      "$type": "number",
+      "$description": "禁用态不透明度（两档：控件族 0.4/整卡灰化 0.6）。",
+      "control-disabled": { "$value": 0.4, "$description": "控件族禁用。fts: DT:209" },
+      "card-disabled": { "$value": 0.6, "$description": "整卡灰化禁用。fts: DT:210" }
+    }
+  }
+}
