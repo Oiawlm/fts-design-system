@@ -1,0 +1,95 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <!-- 深色主题字典（39 键）＝21 SolidColorBrush＋1 CardShadowEffect（主题相关，浅色见
+       DesignTheme.Light.xaml）＋17 主题不变资源（两本同值）。键名照抄源项目（fts 基线
+       bba9b4e，v1.72.0）现行键名；每条注释标注对应 tokens/ DTCG 路径；
+       scripts/validate-tokens.ps1 对账本文件。共享画刷 po:Freeze。提取日期 2026-11-11。 -->
+  <!-- ===== 主题画刷（21）＝ color.dark.* 深色分支 ===== -->
+  <SolidColorBrush x:Key="WindowShellBrush" Color="#CC202021" po:Freeze="True" />
+  <!-- color.surface.window-shell -->
+  <SolidColorBrush x:Key="WindowShellOpaqueBrush" Color="#202021" po:Freeze="True" />
+  <!-- color.surface.dialog -->
+  <SolidColorBrush x:Key="DialogSurfaceBrush" Color="#2B2B2B" po:Freeze="True" />
+  <!-- color.surface.tab-rail -->
+  <SolidColorBrush x:Key="TabRailBrush" Color="#2B2B2C" po:Freeze="True" />
+  <!-- color.surface.card -->
+  <SolidColorBrush x:Key="CardBrush" Color="#2D2D2E" po:Freeze="True" />
+  <!-- color.border.default -->
+  <SolidColorBrush x:Key="BorderBrush" Color="#414143" po:Freeze="True" />
+  <!-- color.text.primary -->
+  <SolidColorBrush x:Key="PrimaryTextBrush" Color="#FFFFFF" po:Freeze="True" />
+  <!-- color.text.secondary -->
+  <SolidColorBrush x:Key="SecondaryTextBrush" Color="#C8C8CA" po:Freeze="True" />
+  <!-- color.accent.default -->
+  <SolidColorBrush x:Key="AccentBrush" Color="#9C8CFF" po:Freeze="True" />
+  <!-- color.danger.default -->
+  <SolidColorBrush x:Key="DangerBrush" Color="#FF8A7A" po:Freeze="True" />
+  <!-- color.surface.header -->
+  <SolidColorBrush x:Key="HeaderBrush" Color="#272728" po:Freeze="True" />
+  <!-- color.interaction.hover-surface -->
+  <SolidColorBrush x:Key="HoverSurfaceBrush" Color="#343436" po:Freeze="True" />
+  <!-- color.border.hover -->
+  <SolidColorBrush x:Key="HoverBorderBrush" Color="#505053" po:Freeze="True" />
+  <!-- color.interaction.selected-card-surface -->
+  <SolidColorBrush x:Key="SelectedCardBrush" Color="#343054" po:Freeze="True" />
+  <!-- color.interaction.selected-card-border -->
+  <SolidColorBrush x:Key="SelectedCardBorderBrush" Color="#7A6DF2" po:Freeze="True" />
+  <!-- color.interaction.active-category -->
+  <SolidColorBrush x:Key="ActiveCategoryBrush" Color="#3A3560" po:Freeze="True" />
+  <!-- color.interaction.drop-target -->
+  <SolidColorBrush x:Key="DropTargetBrush" Color="#322E52" po:Freeze="True" />
+  <!-- color.scrollbar.thumb -->
+  <SolidColorBrush x:Key="ScrollThumbBrush" Color="#505054" po:Freeze="True" />
+  <!-- color.scrollbar.thumb-hover -->
+  <SolidColorBrush x:Key="ScrollThumbHoverBrush" Color="#6E6E74" po:Freeze="True" />
+  <!-- color.surface.status -->
+  <SolidColorBrush x:Key="StatusSurfaceBrush" Color="#282829" po:Freeze="True" />
+  <!-- color.text.on-accent -->
+  <SolidColorBrush x:Key="OnAccentBrush" Color="#FFFFFF" po:Freeze="True" />
+  <!-- ===== 卡片阴影（1）＝ color.dark.shadow + color.dark.shadow-opacity =====
+       参数结构同浅色（x 0/y +2/blur 8/spread 0），深色不透明度 0.35、颜色 #000000。 -->
+  <DropShadowEffect x:Key="CardShadowEffect"
+                    BlurRadius="8"
+                    ShadowDepth="2"
+                    Direction="270"
+                    Opacity="0.35"
+                    Color="#000000"
+                    po:Freeze="True" />
+  <!-- ===== 主题不变资源（17，两本同值）===== -->
+  <!-- typography.family.ui -->
+  <FontFamily x:Key="InterfaceFontFamily">Microsoft YaHei UI, Microsoft YaHei</FontFamily>
+  <!-- dimension.size.card-operation-column -->
+  <GridLength x:Key="CardOperationColumnWidth">30</GridLength>
+  <!-- dimension.spacing.card-text-reserved-right（派生＝2×操作列宽＋4） -->
+  <Thickness x:Key="CardTextReservedRightInset" Left="0" Top="0" Right="64" Bottom="0" />
+  <!-- typography.line-height.body（派生＝ceil(14×1.27001953125+1)） -->
+  <sys:Double x:Key="CardTextLineHeight">19</sys:Double>
+  <!-- typography.clamp.body-preview-height（派生＝行高 19×5） -->
+  <sys:Double x:Key="CardTextPreviewMaxHeight">95</sys:Double>
+  <!-- typography.clamp.note-preview-height（派生＝行高 19×2） -->
+  <sys:Double x:Key="CardNoteMaxHeight">38</sys:Double>
+  <!-- dimension.radius.shell -->
+  <CornerRadius x:Key="ShellCornerRadius">8</CornerRadius>
+  <!-- dimension.radius.surface -->
+  <CornerRadius x:Key="SurfaceCornerRadius">8</CornerRadius>
+  <!-- dimension.radius.control -->
+  <CornerRadius x:Key="ControlCornerRadius">4</CornerRadius>
+  <!-- dimension.radius.card -->
+  <CornerRadius x:Key="CardCornerRadius">8</CornerRadius>
+  <!-- dimension.radius.header-action -->
+  <CornerRadius x:Key="HeaderActionCornerRadius">7</CornerRadius>
+  <!-- dimension.radius.pin-button -->
+  <CornerRadius x:Key="PinButtonCornerRadius">6</CornerRadius>
+  <!-- dimension.radius.selected-count-badge（＝header-action） -->
+  <CornerRadius x:Key="SelectedCountBadgeCornerRadius">7</CornerRadius>
+  <!-- dimension.radius.selection-ring -->
+  <CornerRadius x:Key="SelectionRingCornerRadius">5</CornerRadius>
+  <!-- dimension.spacing.card-inset（左右）/card-gutter（上下） -->
+  <Thickness x:Key="CardRootMargin" Left="12" Top="4" Right="12" Bottom="4" />
+  <!-- 同上；上距 10 为源项目登记字面量（置顶分隔节奏组成部分），随 Thickness 整体照抄不拆 token -->
+  <Thickness x:Key="CardRootBoundaryMargin" Left="12" Top="10" Right="12" Bottom="4" />
+  <!-- dimension.spacing.card-padding -->
+  <Thickness x:Key="CardPadding" Left="12" Top="12" Right="12" Bottom="12" />
+</ResourceDictionary>

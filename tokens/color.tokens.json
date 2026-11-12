@@ -1,0 +1,141 @@
+{
+  "color": {
+    "$description": "色彩 token：双主题原始色（color.light/color.dark 两组持原始值）＋卡片阴影＋语义色别名（$value 指向 light 分支；深色解析规则＝将别名路径中 `.light.` 替换为 `.dark.`）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/DesignTheme.Light|Dark.xaml（缩写 LT/DK）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.1；提取日期 2026-11-11。",
+    "light": {
+      "$type": "color",
+      "$description": "浅色主题原始色。锚点缩写见本文件顶层 $description。",
+      "window-shell": { "$value": "#F7F8FA", "$description": "窗壳不透明底（材质不可用回退）。fts: DT:10" },
+      "tab-rail": { "$value": "#EFF1F4", "$description": "导航轨表面。fts: DT:11" },
+      "card": { "$value": "#FFFFFF", "$description": "卡片表面。fts: DT:12" },
+      "border": { "$value": "#E2E5EA", "$description": "默认描边。fts: DT:13" },
+      "text-primary": { "$value": "#1D1D1F", "$description": "主文本。fts: DT:14" },
+      "text-secondary": { "$value": "#5F6368", "$description": "次级文本。fts: DT:15" },
+      "accent": { "$value": "#6D5DFB", "$description": "强调色。fts: DT:16" },
+      "danger": { "$value": "#D92D20", "$description": "危险色。fts: DT:17" },
+      "header": { "$value": "#FBFBFC", "$description": "头部条表面。fts: DT:18" },
+      "hover-surface": { "$value": "#F4F5F7", "$description": "悬停表面。fts: DT:19" },
+      "hover-border": { "$value": "#C9CDD5", "$description": "悬停描边。fts: DT:20" },
+      "selected-card-surface": { "$value": "#F3F1FF", "$description": "选中卡表面。fts: DT:21" },
+      "selected-card-border": { "$value": "#8B7CF6", "$description": "选中卡描边。fts: DT:22" },
+      "active-category": { "$value": "#E7E4FF", "$description": "激活分类底。fts: DT:23" },
+      "drop-target": { "$value": "#EAE7FF", "$description": "拖放目标底。fts: DT:24" },
+      "scroll-thumb": { "$value": "#B8BDC7", "$description": "滚动条拇指。fts: DT:25" },
+      "scroll-thumb-hover": { "$value": "#969CA7", "$description": "滚动条拇指悬停。fts: DT:26" },
+      "status-surface": { "$value": "#FCFCFD", "$description": "状态条表面。fts: DT:27" },
+      "on-accent": { "$value": "#FFFFFF", "$description": "强调色上文本/图形。fts: DT:28" },
+      "window-shell-tint": { "$value": "#CCF7F8FA", "$description": "系统材质窗壳半透明色调（#AARRGGBB，浮在 DWM 材质之上）。fts: DT:31" },
+      "dialog-surface": { "$value": "#F9F9F9", "$description": "对话框不透明表面（字典侧值，DT 无常量）。fts: LT:8" },
+      "shadow": {
+        "$type": "shadow",
+        "$value": { "x": "0px", "y": "2px", "blur": "8px", "spread": "0px", "color": "#1D1D1F" },
+        "$description": "卡片阴影参数（fts 共享冻结 CardShadowEffect 原值：Blur 8/Depth 2/Direction 270°→y+2；不透明度单列 shadow-opacity 不折叠）。fts: LT:27-33"
+      },
+      "shadow-opacity": {
+        "$type": "number",
+        "$value": 0.12,
+        "$description": "卡片阴影不透明度（Effect Opacity 属性）。fts: LT:27-33"
+      }
+    },
+    "dark": {
+      "$type": "color",
+      "$description": "深色主题原始色（同键位第二套值，与 light 整本对应）。",
+      "window-shell": { "$value": "#202021", "$description": "fts: DT:35" },
+      "tab-rail": { "$value": "#2B2B2C", "$description": "fts: DT:36" },
+      "card": { "$value": "#2D2D2E", "$description": "fts: DT:37" },
+      "border": { "$value": "#414143", "$description": "fts: DT:38" },
+      "text-primary": { "$value": "#FFFFFF", "$description": "fts: DT:39" },
+      "text-secondary": { "$value": "#C8C8CA", "$description": "fts: DT:40" },
+      "accent": { "$value": "#9C8CFF", "$description": "fts: DT:41" },
+      "danger": { "$value": "#FF8A7A", "$description": "fts: DT:42" },
+      "header": { "$value": "#272728", "$description": "fts: DT:43" },
+      "hover-surface": { "$value": "#343436", "$description": "fts: DT:44" },
+      "hover-border": { "$value": "#505053", "$description": "fts: DT:45" },
+      "selected-card-surface": { "$value": "#343054", "$description": "fts: DT:46" },
+      "selected-card-border": { "$value": "#7A6DF2", "$description": "fts: DT:47" },
+      "active-category": { "$value": "#3A3560", "$description": "fts: DT:48" },
+      "drop-target": { "$value": "#322E52", "$description": "fts: DT:49" },
+      "scroll-thumb": { "$value": "#505054", "$description": "fts: DT:50" },
+      "scroll-thumb-hover": { "$value": "#6E6E74", "$description": "fts: DT:51" },
+      "status-surface": { "$value": "#282829", "$description": "fts: DT:52" },
+      "on-accent": { "$value": "#FFFFFF", "$description": "fts: DT:53" },
+      "window-shell-tint": { "$value": "#CC202021", "$description": "fts: DT:32" },
+      "dialog-surface": { "$value": "#2B2B2B", "$description": "对话框不透明表面（字典侧值，DT 无常量）。fts: DK:7" },
+      "shadow": {
+        "$type": "shadow",
+        "$value": { "x": "0px", "y": "2px", "blur": "8px", "spread": "0px", "color": "#000000" },
+        "$description": "fts: DK:26-32"
+      },
+      "shadow-opacity": {
+        "$type": "number",
+        "$value": 0.35,
+        "$description": "fts: DK:26-32"
+      }
+    },
+    "surface": {
+      "$type": "color",
+      "$description": "表面色（语义角色）——浅色经别名取 light 分支，深色按 `.light.`→`.dark.` 位置替换解析。",
+      "window-shell": { "$value": "{color.light.window-shell}", "$description": "窗壳不透明回退表面。WPF: WindowShellOpaqueBrush。fts: LT:5｜DK:5" },
+      "tab-rail": { "$value": "{color.light.tab-rail}", "$description": "导航轨表面。WPF: TabRailBrush。fts: LT:9｜DK:8" },
+      "card": { "$value": "{color.light.card}", "$description": "卡片表面。WPF: CardBrush。fts: LT:10｜DK:9" },
+      "header": { "$value": "{color.light.header}", "$description": "头部条表面。WPF: HeaderBrush。fts: LT:16｜DK:15" },
+      "status": { "$value": "{color.light.status-surface}", "$description": "状态条表面。WPF: StatusSurfaceBrush。fts: LT:25｜DK:24" },
+      "dialog": { "$value": "{color.light.dialog-surface}", "$description": "对话框不透明表面。WPF: DialogSurfaceBrush。fts: LT:8｜DK:7" }
+    },
+    "material": {
+      "$type": "color",
+      "$description": "系统材质（半透明，#AARRGGBB）。",
+      "window-shell-tint": { "$value": "{color.light.window-shell-tint}", "$description": "系统材质窗壳色调（不透明值=color.surface.window-shell，材质不可用回退）。WPF: WindowShellBrush。fts: LT:4｜DK:4" }
+    },
+    "border": {
+      "$type": "color",
+      "$description": "描边色。",
+      "default": { "$value": "{color.light.border}", "$description": "默认描边。WPF: BorderBrush。fts: LT:11｜DK:10" },
+      "hover": { "$value": "{color.light.hover-border}", "$description": "悬停描边。WPF: HoverBorderBrush。fts: LT:18｜DK:17" }
+    },
+    "text": {
+      "$type": "color",
+      "$description": "文本色。",
+      "primary": { "$value": "{color.light.text-primary}", "$description": "主文本。WPF: PrimaryTextBrush。fts: LT:12｜DK:11" },
+      "secondary": { "$value": "{color.light.text-secondary}", "$description": "次级文本。WPF: SecondaryTextBrush。fts: LT:13｜DK:12" },
+      "on-accent": { "$value": "{color.light.on-accent}", "$description": "强调色上文本/图形。WPF: OnAccentBrush。fts: LT:26｜DK:25" }
+    },
+    "accent": {
+      "$type": "color",
+      "$description": "强调色。",
+      "default": { "$value": "{color.light.accent}", "$description": "WPF: AccentBrush。fts: LT:14｜DK:13" }
+    },
+    "danger": {
+      "$type": "color",
+      "$description": "危险/删除色。",
+      "default": { "$value": "{color.light.danger}", "$description": "WPF: DangerBrush。fts: LT:15｜DK:14" }
+    },
+    "interaction": {
+      "$type": "color",
+      "$description": "交互态色。",
+      "hover-surface": { "$value": "{color.light.hover-surface}", "$description": "悬停表面。WPF: HoverSurfaceBrush。fts: LT:17｜DK:16" },
+      "selected-card-surface": { "$value": "{color.light.selected-card-surface}", "$description": "选中卡表面。WPF: SelectedCardBrush。fts: LT:19｜DK:18" },
+      "selected-card-border": { "$value": "{color.light.selected-card-border}", "$description": "选中卡描边。WPF: SelectedCardBorderBrush。fts: LT:20｜DK:19" },
+      "active-category": { "$value": "{color.light.active-category}", "$description": "激活分类底。WPF: ActiveCategoryBrush。fts: LT:21｜DK:20" },
+      "drop-target": { "$value": "{color.light.drop-target}", "$description": "拖放目标底。WPF: DropTargetBrush。fts: LT:22｜DK:21" }
+    },
+    "scrollbar": {
+      "$type": "color",
+      "$description": "滚动条。",
+      "thumb": { "$value": "{color.light.scroll-thumb}", "$description": "拇指。WPF: ScrollThumbBrush。fts: LT:23｜DK:22" },
+      "thumb-hover": { "$value": "{color.light.scroll-thumb-hover}", "$description": "拇指悬停。WPF: ScrollThumbHoverBrush。fts: LT:24｜DK:23" }
+    },
+    "shadow": {
+      "$description": "卡片阴影（语义层）。card=阴影对象；card-opacity=不透明度（WPF 侧为 CardShadowEffect 的 Opacity 属性，无独立资源键）。fts: LT:27-33｜DK:26-32",
+      "card": {
+        "$type": "shadow",
+        "$value": "{color.light.shadow}",
+        "$description": "WPF: CardShadowEffect（BlurRadius/ShadowDepth/Direction/Color 四属性）。fts: LT:27-33｜DK:26-32"
+      },
+      "card-opacity": {
+        "$type": "number",
+        "$value": "{color.light.shadow-opacity}",
+        "$description": "WPF: CardShadowEffect@Opacity。fts: LT:27-33｜DK:26-32"
+      }
+    }
+  }
+}

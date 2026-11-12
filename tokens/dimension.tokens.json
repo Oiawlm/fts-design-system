@@ -1,0 +1,50 @@
+{
+  "dimension": {
+    "$type": "dimension",
+    "$description": "尺寸 token：圆角、间距、位移、组件尺寸与瓦片几何（值带 px 单位，负值合法；列数类为 number 无单位）。来源：fts 仓基线 bba9b4e（v1.72.0）——src/FloatingTransferStation.Core/Design/DesignTokens.cs（缩写 DT）与 src/FloatingTransferStation/Resources/MainWindowStyles.xaml（缩写 M）只读取证；映射权威 handoff/2026-11-11-bootstrap/TOKEN-MAP-V1.md §3.2；提取日期 2026-11-11。",
+    "radius": {
+      "$description": "圆角阶梯（控件级 4/表面级 8 两档＋阶梯外登记值）；shell=窗壳圆角（DWM 裁剪与内容层同值）。",
+      "control": { "$value": "4px", "$description": "控件级（输入框/按钮/下拉/行内编辑器）。WPF: ControlCornerRadius。fts: DT:190｜M:50" },
+      "surface": { "$value": "8px", "$description": "表面级（卡/瓦片/弹窗壳）。WPF: SurfaceCornerRadius。fts: DT:191｜M:49" },
+      "card": { "$value": "8px", "$description": "卡片（与 surface 同值但独立身份 token，语义不同不合并）。WPF: CardCornerRadius。fts: DT:192｜M:51" },
+      "shell": { "$value": "8px", "$description": "窗壳（独立身份 token）。WPF: ShellCornerRadius。fts: DT:189｜M:42" },
+      "header-action": { "$value": "7px", "$description": "头部操作钮/徽章（阶梯外登记值）。WPF: HeaderActionCornerRadius。fts: DT:193｜M:52" },
+      "pin-button": { "$value": "6px", "$description": "置顶钮（阶梯外登记值）。WPF: PinButtonCornerRadius。fts: DT:194｜M:53" },
+      "selection-ring": { "$value": "5px", "$description": "选择环（识别元素 r5，卡与瓦片勾选钮共用）。WPF: SelectionRingCornerRadius。fts: DT:195｜M:57" },
+      "selected-count-badge": { "$value": "{dimension.radius.header-action}", "$description": "多选计数徽章（锁定测试断言＝header-action）。WPF: SelectedCountBadgeCornerRadius。fts: M:54（锁测试 :80-82）" }
+    },
+    "spacing": {
+      "$description": "间距。",
+      "card-inset": { "$value": "12px", "$description": "卡片列表左右内缩（CardRootMargin/CardRootBoundaryMargin 左右）。WPF: CardRootMargin/CardRootBoundaryMargin。fts: DT:200｜M:62-63" },
+      "card-gutter": { "$value": "4px", "$description": "卡片上下沟道（CardRootMargin 上下/CardRootBoundaryMargin 下）。WPF: CardRootMargin/CardRootBoundaryMargin。fts: DT:201｜M:62-63" },
+      "card-padding": { "$value": "12px", "$description": "卡片内边距。WPF: CardPadding。fts: DT:202｜M:64" },
+      "launcher-viewport-inset": { "$value": "8px", "$description": "瓦片视口顶/底内衬（吸收动画溢出对圆角的裁切）。fts: DT:230" },
+      "reading-block-gap": { "$value": "6px", "$description": "阅读视图块间垂直间距。fts: DT:175" },
+      "reading-code-padding": { "$value": "8px", "$description": "阅读视图代码块内边距。fts: DT:177" },
+      "card-text-reserved-right": { "$value": "64px", "$description": "卡片正文右侧排他内缩（派生公式＝2×card-operation-column＋4，收原始值）。WPF: CardTextReservedRightInset。fts: M:25" }
+    },
+    "offset": {
+      "$description": "动画位移幅值（负值合法）。",
+      "content-entrance": { "$value": "6px", "$description": "卡片入场位移。fts: DT:198" },
+      "collapse-exit": { "$value": "24px", "$description": "收起退出位移。fts: DT:199" },
+      "card-hover-lift": { "$value": "-1px", "$description": "卡片悬停抬升。fts: DT:205" },
+      "tile-hover-lift": { "$value": "-2px", "$description": "瓦片悬停抬升（区别于卡片 −1）。fts: DT:137" },
+      "tile-entrance": { "$value": "8px", "$description": "瓦片入场纵向位移（卡片走 content-entrance 6）。fts: DT:131" }
+    },
+    "size": {
+      "$description": "组件尺寸。",
+      "peek-handle-width": { "$value": "16px", "$description": "贴边停靠把手屏内保留宽（视觉宽＝命中宽＝保留宽同值）。fts: DT:82" },
+      "reading-quote-bar": { "$value": "3px", "$description": "阅读视图块引用左缘竖条宽。fts: DT:179" },
+      "card-operation-column": { "$value": "30px", "$description": "卡片右上操作列宽。WPF: CardOperationColumnWidth。fts: M:17" }
+    },
+    "tile": {
+      "$description": "快捷操作瓦片布局几何（拉伸填充单一几何源的输入）。",
+      "width": { "$value": "84px", "$description": "瓦片宽（域内下限）。fts: DT:218" },
+      "height": { "$value": "100px", "$description": "瓦片高。fts: DT:219" },
+      "gutter": { "$value": "8px", "$description": "瓦片沟道。fts: DT:220" },
+      "pitch": { "$value": "92px", "$description": "瓦片节距（派生公式＝width＋gutter，收原始值）。fts: DT:221" },
+      "min-columns": { "$type": "number", "$value": 3, "$description": "最小列数。fts: DT:222" },
+      "max-columns": { "$type": "number", "$value": 6, "$description": "最大列数。fts: DT:223" }
+    }
+  }
+}
