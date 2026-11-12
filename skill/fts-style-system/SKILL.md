@@ -1,12 +1,13 @@
 ---
 name: fts-style-system
-description: 悬浮中转站（fts）UI/动效/前端风格系统：把这套风格复用到任何新项目时使用——新界面、新窗口、新设置页、新对话框、统一风格、动效与微交互、空状态、卡片/瓦片/滚动条/网格布局、子分组 chip 轨与过滤、停靠/贴边 peek 与把手、二维码等容器变换（container transform）、实验开关与偏好迁移、悬停意图事务、hover/pressed/禁用交互状态体系、暗色主题，或用户说「按 fts 风格」「保持统一的风格」「跟悬浮中转站一样」时必读。包含：风格哲学六约束、语义 token 与档位表（圆角/时长/间距/字号/描边/阴影/禁用两档）、布局范式六式、动效三档与缓动按语义、交互状态类型学、反例库 24 条（现象→根因→正解）、WPF 落地映射与陷阱库、七个特性级 worked example、新项目八步套用工作流。源仓：fts-design-system（github.com/Oiawlm/fts-design-system，本 skill 随仓版本化于 skill/fts-style-system/，由 scripts/sync-skill.ps1 部署）。新项目默认采用本体系，无需逐次点名。不适用：非 UI 的纯逻辑/数据/持久化修复；项目已有自己的设计体系且未要求对齐 fts 风格；与界面无关的工程任务。
+description: 悬浮中转站（fts）UI/动效/前端风格系统：把这套风格复用到任何新项目时使用——新界面、新窗口、新设置页、新对话框、统一风格、动效与微交互、空状态、卡片/瓦片/滚动条/网格布局、子分组 chip 轨与过滤、停靠/贴边 peek 与把手、二维码等容器变换（container transform）、实验开关与偏好迁移、悬停意图事务、hover/pressed/禁用交互状态体系、暗色主题，或用户说「按 fts 风格」「保持统一的风格」「跟悬浮中转站一样」时必读。包含：风格哲学六约束、语义 token 与档位表（圆角/时长/间距/字号/描边/阴影/禁用两档）、布局范式六式、动效三档与缓动按语义、交互状态类型学、反例库 24 条（现象→根因→正解）、WPF 落地映射与陷阱库、七个特性级 worked example、新项目八步套用工作流。源仓：fts-design-system（github.com/Oiawlm/fts-design-system，本 skill 随仓版本化于 skill/fts-style-system/，由仓内 scripts/sync-skill.ps1 一键部署到 ZCode / Claude Code / Codex / Cursor 等任意 AI 编码代理）。新项目默认采用本体系，无需逐次点名。不适用：非 UI 的纯逻辑/数据/持久化修复；项目已有自己的设计体系且未要求对齐 fts 风格；与界面无关的工程任务。
+license: MIT
 ---
 
 > **定位**：把「悬浮中转站」的设计体系（哲学/token/范式/动效/状态）提炼为可迁移风格系统，任何新项目不重新推导即可复现这套风格。本文件是**路由层**——哲学摘要＋八步工作流＋验收清单；通用规则细节由 references 七件承载（自包含提炼，离线可用），按「参考文件地图」按需精读。
 > **权威分工**：本 Skill＝提炼视图；数值与规则的权威源＝**fts-design-system 仓**（`github.com/Oiawlm/fts-design-system`）——`tokens/`（W3C DTCG 数值快照，152 token）、`docs/`（人类可读权威叙述）、`platforms/`（WPF XAML 与 Web CSS 镜像）、`reference/extractions/`（提取对账）。同名规则表述以 docs 为准；再提取与再部署走仓内 `docs/extraction-protocol.md` 与 `scripts/sync-skill.ps1`。本文全部数值均为**示例值**。
 > **来源**：仓内源 `skill/fts-style-system/`；内容溯源自 fts 1.72.0（commit `bba9b4e`，2026-11-10），fts 专属锚点（file:line/契约号）集中收录在 [references/fts-provenance.md](references/fts-provenance.md)。
-> **日期与行数预算**：2026-11-12 重建（W3c）；本文件 ≤300 行（现 112 行）；references 七件每件 ≤400 行。
+> **日期与行数预算**：2026-11-12 重建（W3c）；2026-11-12 E1 跨 Agent 部署化；本文件 ≤300 行（现 113 行）；references 七件每件 ≤400 行。
 
 ## 适用边界
 
