@@ -144,7 +144,7 @@ powershell -ExecutionPolicy Bypass -File scripts/sync-skill.ps1     # Windows Po
 | 选组件范式 | [docs/patterns/](docs/patterns/)：卡片、瓦片、网格、滚动条、对话框、空状态、chip 轨、贴边停靠、容器变换等 12 篇 |
 | 新项目整体套用 | [docs/adaptation/adoption-workflow.md](docs/adaptation/adoption-workflow.md)（八步工作流＋最小采用集） |
 | WPF / Web 落地细节 | [docs/adaptation/wpf.md](docs/adaptation/wpf.md)、[docs/adaptation/web.md](docs/adaptation/web.md) |
-| 把体系装进 AI 编码代理 | 本页「[30 秒快速开始 → AI Agent](#ai-agent-skill)」小节；skill 源见 [`skill/fts-style-system/`](skill/fts-style-system/) |
+| 把体系装进 AI 编码代理 | 本页「[30 秒快速开始 → AI Agent](#ai-agentskill)」小节；skill 源见 [`skill/fts-style-system/`](skill/fts-style-system/) |
 
 ## 🖼️ 界面一览
 
